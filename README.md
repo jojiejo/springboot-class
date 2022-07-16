@@ -1,3 +1,3 @@
-## Count X O of given string
+## Factorization
 
 ![screenshot](screenshot.jpg)
