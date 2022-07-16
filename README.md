@@ -1,3 +1,3 @@
-## Palindrome Checker
+## Exponent Calculator
 
 ![screenshot](screenshot.jpg)
