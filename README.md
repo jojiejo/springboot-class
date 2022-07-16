@@ -1,3 +1,3 @@
-## Count X O of given string
+## Prime Number Checker
 
 ![screenshot](screenshot.jpg)
