@@ -1,10 +1,17 @@
+import java.util.Scanner;
+
 public class VocalConsonantCounter {    
-    public static void main(String[] args) {    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan input: ");
+        String stringGiven = input.nextLine();
+        input.close();
+
         int vocalCounter = 0;
         int consonantCounter = 0;     
-        String stringGiven = "Alterra Indonesia"; 
+        int totalCharacter = stringGiven.length();
+
         stringGiven = stringGiven.toLowerCase();
-        int totalCharacter = stringGiven.length();  
             
         for(int i = 0; i < totalCharacter; i++) {    
             if(stringGiven.charAt(i) == 'a' || 
@@ -15,7 +22,7 @@ public class VocalConsonantCounter {
                 vocalCounter++;      
             else if(stringGiven.charAt(i) >= 'a' && stringGiven.charAt(i) <= 'z' ) consonantCounter++;
         }
-        
+
         System.out.println("Jumlah Vokal: " + vocalCounter);    
         System.out.println("Jumlah Konsonan: " + consonantCounter);
         System.out.println("Total Karakter: " + totalCharacter);   
