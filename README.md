@@ -1,3 +1,3 @@
-## Exponent Calculator
+## Asterisk Triangle
 
 ![screenshot](screenshot.jpg)
