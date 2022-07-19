@@ -1,3 +1,3 @@
-## Pair with Target Sum 
+## Unique Array Elements
 
 ![screenshot](screenshot.jpg)
