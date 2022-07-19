@@ -1,3 +1,3 @@
-## Array Merge
+## Unique Numbers
 
 ![screenshot](screenshot.jpg)
