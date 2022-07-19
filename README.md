@@ -1,3 +1,3 @@
-## Asterisk Triangle
+## Array Merge
 
 ![screenshot](screenshot.jpg)
