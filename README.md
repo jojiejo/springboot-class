@@ -1,3 +1,3 @@
-## Unique Numbers
+## Pair with Target Sum 
 
 ![screenshot](screenshot.jpg)
