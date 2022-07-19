@@ -1,3 +1,3 @@
-## Unique Array Elements
+## Remove Duplicates
 
 ![screenshot](screenshot.jpg)
