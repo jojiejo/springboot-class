@@ -1,3 +1,3 @@
-## Vehicle Class Inheritance
+## Animal Class Inheritance & Polymorphism
 
 ![screenshot](screenshot.jpg)
