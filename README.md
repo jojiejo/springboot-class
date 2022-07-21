@@ -1,3 +1,3 @@
-## Prime Number Checker
+## Fibonacci 
 
 ![screenshot](screenshot.jpg)
