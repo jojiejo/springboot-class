@@ -1,5 +1,3 @@
-## Checking prime number with O(n)
-
-*Note: you have to run it with `-Xss4m` otherwise you will get `java.lang.StackOverflowError`
+## Fast exponent with O(n)
 
 ![screenshot](screenshot.jpg)
