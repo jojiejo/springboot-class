@@ -1,3 +1,3 @@
-## Most Frequent Element
+## Simple Equation
 
 ![screenshot](screenshot.jpg)
