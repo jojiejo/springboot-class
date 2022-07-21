@@ -1,3 +1,3 @@
-## Find Maximum and Minimum Value of Given Array 
+## Maximum Buyable Product
 
 ![screenshot](screenshot.jpg)
