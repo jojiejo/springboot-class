@@ -1,3 +1,3 @@
-## Simple Equation
+## Money Change
 
 ![screenshot](screenshot.jpg)
