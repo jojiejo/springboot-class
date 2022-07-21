@@ -1,3 +1,3 @@
-## Maximum Buyable Product
+## Most Frequent Element
 
 ![screenshot](screenshot.jpg)
