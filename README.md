@@ -1,3 +1,3 @@
-## Fibonacci Top-down
+## Fibonacci Bottom-up
 
 ![screenshot](screenshot.jpg)

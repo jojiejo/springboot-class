@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class Fibonacci {    
     static int getFibbonaci(int n) {
-        if (n <= 1) return n;
-        return getFibbonaci(n - 1) + getFibbonaci(n - 2);
+        int[] fibArr = new int[n+1];
+        fibArr[1] = 1;
+        for (int i = 2; i <= n; i++){
+            fibArr[i] = fibArr[i - 1] + fibArr[i - 2];
+        }
+        return fibArr[n];
     }
 
     public static void main(String[] args) {
