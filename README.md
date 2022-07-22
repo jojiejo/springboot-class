@@ -1,3 +1,3 @@
-## Dragon of Loowater
+## Binary Search
 
 ![screenshot](screenshot.jpg)
