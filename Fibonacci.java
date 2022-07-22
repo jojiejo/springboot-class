@@ -12,7 +12,6 @@ public class Fibonacci {
         int intGiven = input.nextInt();
         input.close();
 
-        System.out.println("Output :");
-        System.out.println(getFibbonaci(intGiven));
+        System.out.println("Output :" + getFibbonaci(intGiven));
     }    
 }   
