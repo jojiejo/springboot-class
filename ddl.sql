@@ -29,6 +29,7 @@ CREATE TABLE products (
     name VARCHAR(50) NOT NULL,
     product_type_id INT NOT NULL,
     operator_id INT NOT NULL,
+    price FLOAT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP,
     FOREIGN KEY (product_type_id) REFERENCES product_types(id),
