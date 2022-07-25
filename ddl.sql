@@ -36,7 +36,7 @@ CREATE TABLE products (
 ); 
 
 CREATE TABLE product_descriptions (
-    product_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL PRIMARY KEY,
     description TEXT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP,
@@ -91,7 +91,7 @@ ALTER TABLE kurir RENAME TO shipping;
 DROP TABLE shipping;
 
 CREATE TABLE payment_method_descriptions (
-    payment_method_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    payment_method_id INT NOT NULL PRIMARY KEY,
     description TEXT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP,
