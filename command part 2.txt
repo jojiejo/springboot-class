@@ -1,0 +1,113 @@
+### Tampilkan data product dari AuthorID 1 & 2
+db.books.find({ $or: [{ authorID: 1 }, { authorID: 2}] })
+
+### Tampilkan data buku & harga dari AuthorID 1
+db.books.find({ authorID: 1 }, { title: 1, price: 1 })
+
+### Tampilkan jumlah halaman buku AuthorID 2
+db.books.aggregate([
+    {
+        $match: {
+            authorID: 2
+        }
+    },
+    { $group: { _id : "$authorID", sum : { $sum: "$stats.page" } } }
+])
+
+### Tampilkan semua field books dan authors yang beririsan
+db.books.aggregate([
+    {
+        $lookup: {
+            from: "authors",
+            localField: "authorID",
+            foreignField: "_id",
+            as: "author"
+        }
+    }
+]);
+
+### Tampilkan semua field books, authors & publishers yang beririsan
+db.books.aggregate([
+    {
+        $lookup: {
+            from: "authors",
+            localField: "authorID",
+            foreignField: "_id",
+            as: "author"
+        }
+    },
+    {
+        $lookup: {
+            from: "publishers",
+            localField: "publisherID",
+            foreignField: "_id",
+            as: "publisher"
+        }
+    }
+]);
+
+### Tampilkan summary data authors, books & publishers
+db.books.aggregate([
+    {
+        $lookup: {
+            from: "authors",
+            localField: "authorID",
+            foreignField: "_id",
+            as: "author"
+        }
+    },
+    {$unwind: "$author"},
+    {
+        $group: {
+            _id: { $concat: ["$author.firstName", " ", "$author.lastName"] },
+            num_of_books: { $sum: 1 },
+            list_of_books: { $push: "$title" }
+        }
+    },
+    { 
+        $sort: { _id : 1 }
+    }
+]);
+
+### Tampilkan diskon untuk setiap buku
+db.books.aggregate([
+    {
+        $project: {
+            title: 1,
+            price: 1,
+            discount: {
+                $switch: {
+                    "branches": [
+                        { "case": { "$lt": [ "$price", 60000 ] }, "then": "1%" },
+                        { "case": { "$lt": [ "$price", 90000 ] }, "then": "2%" },
+                        { "case": { "$gt": [ "$price", 90000 ] }, "then": "3%" },
+                    ],
+                    "default": 3
+                }
+            }
+        }
+    }
+])
+
+### Tampilkan buku dan urutkan harga dari yang termahal sampai termurah
+db.books.aggregate([
+    {
+        $lookup: {
+            from: "publishers",
+            localField: "publisherID",
+            foreignField: "_id",
+            as: "publisher"
+        }
+    },
+    { $unwind: "$publisher"},
+    { 
+        $project: {
+            _id: 1,
+            title: 1, 
+            price: 1, 
+            publisher: "$publisher.publisherName" 
+        }
+    },
+    { $skip: 2 },
+    { $limit: 2 }
+]);

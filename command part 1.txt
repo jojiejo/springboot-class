@@ -1,0 +1,660 @@
+### CREATE
+
+use digital_outlet
+
+db.createCollection('operators')
+db.operators.insertMany([
+    {
+        _id: 1,
+        name:"XL",
+        created_at: new Date()
+    },
+    {
+        _id: 2,
+        name:"Telkomsel",
+        created_at: new Date()
+    },
+    {
+        _id: 3,
+        name:"3",
+        created_at: new Date()
+    },
+    {
+        _id: 4,
+        name:"IM3",
+        created_at: new Date()
+    },
+    {
+        _id: 5,
+        name:"Axis",
+        created_at: new Date()
+    }
+])
+
+db.createCollection('product_types')
+db.product_types.insertMany([
+    {
+        _id: 1,
+        name:"Pulsa",
+        created_at: new Date()
+    },
+    {
+        _id: 2,
+        name:"Kartu Prabayar",
+        created_at: new Date()
+    },
+    {
+        _id: 3,
+        name:"Kartu Pascabayar",
+        created_at: new Date()
+    }
+])
+
+db.createCollection('products')
+db.products.insertMany([
+    {
+        _id: 1,
+        code: "P001",
+        name: "Pulsa 3 10000",
+        product_type_id: 1,
+        operator_id: 3,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        _id: 2,
+        code: "P002",
+        name: "Pulsa 3 20000",
+        product_type_id: 1,
+        operator_id: 3,
+        price: 22000,
+        created_at: new Date()
+    }
+])
+db.products.insertMany([
+    {
+        _id: 3,
+        code: "P003",
+        name: "Kartu Prabayar XL Isi 10000",
+        product_type_id: 2,
+        operator_id: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        _id: 4,
+        code: "P004",
+        name: "Kartu Prabayar XL Isi 20000",
+        product_type_id: 2,
+        operator_id: 1,
+        price: 22000,
+        created_at: new Date()
+    },
+    {
+        _id: 5,
+        code: "P005",
+        name: "Kartu Prabayar XL Isi 30000",
+        product_type_id: 2,
+        operator_id: 1,
+        price: 32000,
+        created_at: new Date()
+    }
+])
+db.products.insertMany([
+    {
+        _id: 6,
+        code: "P006",
+        name: "Kartu Pascabayar IM3 Isi 10000",
+        product_type_id: 3,
+        operator_id: 4,
+        price: 13000,
+        created_at: new Date()
+    },
+    {
+        _id: 7,
+        code: "P007",
+        name: "Kartu Pascabayar IM3 Isi 20000",
+        product_type_id: 3,
+        operator_id: 4,
+        price: 23000,
+        created_at: new Date()
+    },
+    {
+        _id: 8,
+        code: "P008",
+        name: "Kartu Pascabayar IM3 Isi 30000",
+        product_type_id: 3,
+        operator_id: 4,
+        price: 33000,
+        created_at: new Date()
+    }
+])
+
+db.createCollection('product_descriptions')
+db.product_descriptions.insertMany([
+    {
+        _id: 1,
+        description: "Hanya Pulsa 3 10000",
+        created_at: new Date()
+    },
+    {
+        _id: 2,
+        description: "Hanya Pulsa 3 20000",
+        created_at: new Date()
+    },
+    {
+        _id: 3,
+        description: "Kartu Prabayar XL + Pulsa 10000",
+        created_at: new Date()
+    },
+    {
+        _id: 4,
+        description: "Kartu Prabayar XL + Pulsa 20000",
+        created_at: new Date()
+    },
+    {
+        _id: 5,
+        description: "Kartu Prabayar XL + Pulsa 30000",
+        created_at: new Date()
+    },
+    {
+        _id: 6,
+        description: "Kartu Pascabayar IM3 + Pulsa 10000",
+        created_at: new Date()
+    },
+    {
+        _id: 7,
+        description: "Kartu Pascabayar IM3 + Pulsa 20000",
+        created_at: new Date()
+    },
+    {
+        _id: 8,
+        description: "Kartu Pascabayar IM3 + Pulsa 30000",
+        created_at: new Date()
+    }
+])
+
+db.createCollection('payment_methods')
+db.payment_methods.insertMany([
+    {
+        _id: 1,
+        name: "Cash",
+        created_at: new Date()
+    },
+    {
+        _id: 2,
+        name: "OVO",
+        created_at: new Date()
+    },
+    {
+        _id: 3,
+        name: "Gopay",
+        created_at: new Date()
+    },
+])
+
+db.createCollection('users')
+db.users.insertMany([
+    {
+        _id: 1,
+        name: "Djodi Ramadhan",
+        address: "Jl. XXX Jakarta",
+        date_of_birth: "1993-03-17",
+        gender: "Male",
+        status: "Single",
+        created_at: new Date()
+    },
+    {
+        _id: 2,
+        name: "Wendy Grace",
+        address: "Jl. YYY Jakarta",
+        date_of_birth: "1991-05-01",
+        gender: "Female",
+        status: "Single",
+        created_at: new Date()
+    },
+    {
+        _id: 3,
+        name: "Luqman Alfarisi",
+        address: "Jl. ZZZ Jakarta",
+        date_of_birth: "1994-11-02",
+        gender: "Male",
+        status: "Married",
+        created_at: new Date()
+    },
+    {
+        _id: 4,
+        name: "Citra Widya",
+        address: "Jl. AAA Jakarta",
+        date_of_birth: "1993-23-09",
+        gender: "Female",
+        status: "Single",
+        created_at: new Date()
+    },
+    {
+        _id: 5,
+        name: "Salamah Farida",
+        address: "Jl. ZZZ Jakarta",
+        date_of_birth: "1995-22-09",
+        gender: "Female",
+        status: "Married",
+        created_at: new Date()
+    },
+])
+
+db.createCollection('transactions')
+db.transactions.insertMany([
+    {
+        _id: 1,
+        customer_id: 1,
+        payment_method_id: 1,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 37000,
+        created_at: new Date()
+    },
+    {
+        _id: 2,
+        customer_id: 1,
+        payment_method_id: 2,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 66000,
+        created_at: new Date()
+    },
+    {
+        _id: 3,
+        customer_id: 1,
+        payment_method_id: 1,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 36000,
+        created_at: new Date()
+    },
+    {
+        _id: 4,
+        customer_id: 2,
+        payment_method_id: 3,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 66000,
+        created_at: new Date()
+    },
+    {
+        _id: 5,
+        customer_id: 2,
+        payment_method_id: 2,
+        status: "Paid",
+        total_quantity: 4,
+        total_price: 108000,
+        created_at: new Date()
+    },
+    {
+        _id: 6,
+        customer_id: 2,
+        payment_method_id: 1,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 39000,
+        created_at: new Date()
+    },
+    {
+        _id: 7,
+        customer_id: 3,
+        payment_method_id: 1,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 69000,
+        created_at: new Date()
+    },
+    {
+        _id: 8,
+        customer_id: 3,
+        payment_method_id: 2,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 99000,
+        created_at: new Date()
+    },
+    {
+        _id: 9,
+        customer_id: 3,
+        payment_method_id: 2,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 36000,
+        created_at: new Date()
+    },
+    {
+        _id: 10,
+        customer_id: 4,
+        payment_method_id: 3,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 66000,
+        created_at: new Date()
+    },
+    {
+        _id: 11,
+        customer_id: 4,
+        payment_method_id: 3,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 66000,
+        created_at: new Date()
+    },
+    {
+        _id: 12,
+        customer_id: 4,
+        payment_method_id: 1,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 66000,
+        created_at: new Date()
+    },
+    {
+        _id: 13,
+        customer_id: 5,
+        payment_method_id: 1,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 69000,
+        created_at: new Date()
+    },
+    {
+        _id: 14,
+        customer_id: 5,
+        payment_method_id: 2,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 69000,
+        created_at: new Date()
+    },
+    {
+        _id: 15,
+        customer_id: 5,
+        payment_method_id: 3,
+        status: "Paid",
+        total_quantity: 3,
+        total_price: 66000,
+        created_at: new Date()
+    }
+])
+
+db.createCollection('transaction_details')
+db.transaction_details.insertMany([
+    {
+        transaction_id: 1,
+        product_id: 1,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 1,
+        product_id: 3,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 1,
+        product_id: 6,
+        quantity: 1,
+        price: 13000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 2,
+        product_id: 3,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 2,
+        product_id: 4,
+        quantity: 1,
+        price: 22000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 2,
+        product_id: 5,
+        quantity: 1,
+        price: 32000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 3,
+        product_id: 1,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 3,
+        product_id: 3,
+        quantity: 2,
+        price: 24000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 4,
+        product_id: 1,
+        quantity: 3,
+        price: 66000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 5,
+        product_id: 5,
+        quantity: 2,
+        price: 64000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 5,
+        product_id: 2,
+        quantity: 1,
+        price: 22000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 5,
+        product_id: 4,
+        quantity: 2,
+        price: 22000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 6,
+        product_id: 6,
+        quantity: 2,
+        price: 26000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 6,
+        product_id: 7,
+        quantity: 1,
+        price: 23000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 7,
+        product_id: 6,
+        quantity: 1,
+        price: 13000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 7,
+        product_id: 7,
+        quantity: 1,
+        price: 23000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 7,
+        product_id: 8,
+        quantity: 1,
+        price: 33000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 8,
+        product_id: 8,
+        quantity: 3,
+        price: 99000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 9,
+        product_id: 1,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 9,
+        product_id: 3,
+        quantity: 2,
+        price: 24000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 10,
+        product_id: 1,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 10,
+        product_id: 2,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 10,
+        product_id: 5,
+        quantity: 1,
+        price: 32000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 11,
+        product_id: 1,
+        quantity: 2,
+        price: 24000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 11,
+        product_id: 2,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 12,
+        product_id: 4,
+        quantity: 3,
+        price: 66000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 13,
+        product_id: 6,
+        quantity: 1,
+        price: 13000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 13,
+        product_id: 7,
+        quantity: 1,
+        price: 23000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 13,
+        product_id: 8,
+        quantity: 1,
+        price: 33000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 14,
+        product_id: 6,
+        quantity: 1,
+        price: 13000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 14,
+        product_id: 7,
+        quantity: 1,
+        price: 23000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 14,
+        product_id: 8,
+        quantity: 1,
+        price: 33000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 15,
+        product_id: 3,
+        quantity: 1,
+        price: 12000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 15,
+        product_id: 4,
+        quantity: 1,
+        price: 22000,
+        created_at: new Date()
+    },
+    {
+        transaction_id: 15,
+        product_id: 5,
+        quantity: 1,
+        price: 32000,
+        created_at: new Date()
+    }
+])
+
+### READ
+
+### Nama User dengan gender laki-laki
+db.users.find({ gender:"Male" }, { name:1, _id:0 });
+
+### Produk dengan ID 3
+db.products.find({ _id:3 });
+
+### Jumlah User dengan gender Perempuan
+db.users.find({ gender:"Female" }).count();
+
+### Data pelanggan sesuai abjad dari nama
+db.users.find().sort({ name: 1 });
+
+### 5 Data Produk
+db.products.find().limit(5);
+
+### Update data produk dengan ID 1
+db.products.update({ _id: 1}, { $set: { name: "product dummy" }});
+
+### Update quantity menjadi 3 pada collection transaction_details yang product id-nya 1
+db.transaction_details.update({ product_id: 1}, { $set: { quantity: 3 }}); 
+
+### Hapus data produk dengan ID 1
+db.products.remove({ _id: 1});
+
+### Hapus data produk dengan ID 1
+db.products.remove({ product_type_id: 1}); 

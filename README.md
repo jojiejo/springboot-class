@@ -1,5 +1,3 @@
-## springboot-class
+## MongoDB
 
-### I use MySQL to execute DDL
-
-![erd](erd.png)
+screenshots are attached inside this repository
