@@ -12,4 +12,4 @@
 
 ### Build Test
 
-![screenshot-3](build-test.jpg)
+![screenshot-3](build-test-success.jpg)
